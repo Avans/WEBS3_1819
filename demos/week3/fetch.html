@@ -1,0 +1,32 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+  <div id="myDiv2">
+
+  </div>
+  <script>
+    //from : https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    //Fetch returns a Promise!
+
+    document.getElementById("myDiv2").innerHTML = "Loading chuck";
+
+
+    let prom1 = fetch('https://api.chucknorris.io/jokes/random');
+
+    let prom2 = prom1.then(function (response) {
+      return response.json()
+    });
+
+    prom2.then(function (myJson) {
+      console.log(myJson);
+      document.getElementById("myDiv2").innerHTML = JSON.stringify(myJson);
+    });
+  </script>
+
+</body>
+
+</html>
