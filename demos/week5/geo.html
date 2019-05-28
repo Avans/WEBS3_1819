@@ -1,0 +1,31 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <div id="geostatus"></div>
+        <div id="long"></div>
+        <div id="lat"></div>
+
+        <script>
+        if ("geolocation" in navigator) {
+        /* geolocation is available !!!! LET OP, dit vraagt nog niet om je locatie..puur alleen of de functionaliteit er is*/
+        document.getElementById('geostatus').innerHTML = 'Tracking device active!'
+        } else {
+        /* geolocation IS NOT available */
+        document.getElementById('geostatus').innerHTML = '... ... ...'
+        }
+        
+        // Dit vraagt wel om je toestemming!
+        
+        navigator.geolocation.getCurrentPosition(function(position) {
+            document.getElementById('long').innerHTML = position.coords.longitude;
+            document.getElementById('lat').innerHTML =position.coords.latitude;
+        
+        });
+
+
+        </script>
+    </body>
+</html>

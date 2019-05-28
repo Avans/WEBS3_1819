@@ -1,0 +1,17 @@
+{
+  "name": "groep2_week5",
+  "author": "Stijn Smulders",
+  "scripts": {
+    "build": "webpack --watch"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.0.6",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  }
+}
